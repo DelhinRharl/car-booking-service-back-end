@@ -1,0 +1,25 @@
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/puma-5.6.4/ext/puma_http11
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20220509-87824-viei5w.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+** Puma will be compiled without SSL support
+creating Makefile
+
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/puma-5.6.4/ext/puma_http11
+make DESTDIR\= clean
+rm -f 
+rm -f puma_http11.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/puma-5.6.4/ext/puma_http11
+make DESTDIR\=
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o http11_parser.o -c http11_parser.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o mini_ssl.o -c mini_ssl.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o puma_http11.o -c puma_http11.c
+rm -f puma_http11.so
+gcc -shared -o puma_http11.so http11_parser.o mini_ssl.o puma_http11.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld   -m64  -lruby  -lm   -lc
+
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/puma-5.6.4/ext/puma_http11
+make DESTDIR\= install
+/usr/bin/mkdir -p . ./.gem.20220509-87824-fu3fb1/puma
+exit > .sitearchdir.-.puma.time
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20220509-87824-fu3fb1/puma
