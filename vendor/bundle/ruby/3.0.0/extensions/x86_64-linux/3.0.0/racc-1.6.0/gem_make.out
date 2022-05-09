@@ -1,0 +1,22 @@
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20220509-87824-gmh7tu.rb extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= clean
+rm -f 
+rm -f cparse.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\=
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_BLOCK_CALL -DHAVE_RB_ARY_SUBSEQ    -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o cparse.o -c cparse.c
+rm -f cparse.so
+gcc -shared -o cparse.so cparse.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld   -m64  -lruby  -lm   -lc
+
+current directory: /home/kevinkoome/Microverse/car-booking-service-back-end/vendor/bundle/ruby/3.0.0/gems/racc-1.6.0/ext/racc/cparse
+make DESTDIR\= install
+/usr/bin/mkdir -p . ./.gem.20220509-87824-1khxh1/racc
+exit > .sitearchdir.-.racc.time
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20220509-87824-1khxh1/racc
