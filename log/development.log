@@ -1,0 +1,9 @@
+  [1m[35m (3726.1ms)[0m  [1m[35mCREATE DATABASE "car_booking_service_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (1097.3ms)[0m  [1m[35mCREATE DATABASE "car_booking_service_back_end_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2022-05-09 10:20:01 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/i4mcloud/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/i4mcloud/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 19.7ms | Allocations: 829)
+Completed 200 OK in 78ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 7464)
+
+
