@@ -7,3 +7,140 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 78ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 7464)
 
 
+  [1m[35m (481.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3200342286155121975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220509134439)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (142.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "admin" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220509134439"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCars (20220509134550)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (90.2ms)[0m  [1m[35mCREATE TABLE "cars" ("id" bigserial primary key, "make" character varying, "model" character varying, "year" integer, "image" character varying, "price" decimal(10,2), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220509134550"]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReservations (20220509134803)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (50.0ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" bigserial primary key, "user_id" bigint NOT NULL, "car_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48a92fce51"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_b81cc956b2"
+FOREIGN KEY ("car_id")
+  REFERENCES "cars" ("id")
+)[0m
+  [1m[35m (42.5ms)[0m  [1m[35mCREATE INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35m (23.3ms)[0m  [1m[35mCREATE INDEX "index_reservations_on_car_id" ON "reservations" ("car_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220509134803"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-10 06:58:20.525376"], ["updated_at", "2022-05-10 06:58:20.525376"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(3200342286155121975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-05-10 07:58:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.0.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 829)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 7461)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-05-10 07:58:50 +0100
+  
+Zeitwerk::NameError (expected file /home/i4mcloud/Desktop/Microverse/car-booking-service-back-end/app/controllers/api/v1/users_controller.rb to define constant Api::V1::UsersController, but didn't):
+  
+zeitwerk (2.5.4) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.5.4) lib/zeitwerk/kernel.rb:28:in `require'
+activesupport (7.0.2.4) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.2.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.2.4) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.2.4) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.2.4) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.2.4) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.2.4) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.2.4) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.2.4) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.2.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.4) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2022-05-10 07:58:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/users" for ::1 at 2022-05-10 07:59:39 +0100
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 4784)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2022-05-10 08:18:15 +0100
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:45:in `set_user'
+Completed 404 Not Found in 22ms (ActiveRecord: 8.8ms | Allocations: 6225)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/api/v1/users_controller.rb:45:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Charles"], ["admin", false], ["created_at", "2022-05-10 07:19:04.491584"], ["updated_at", "2022-05-10 07:19:04.491584"]]
+  [1m[36mTRANSACTION (41.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bob"], ["admin", false], ["created_at", "2022-05-10 07:19:11.750086"], ["updated_at", "2022-05-10 07:19:11.750086"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Elyse"], ["admin", false], ["created_at", "2022-05-10 07:19:22.886083"], ["updated_at", "2022-05-10 07:19:22.886083"]]
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCar Create (0.5ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "year", "image", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["make", "Lamborghini"], ["model", "Huracan Tecnica"], ["year", 2022], ["image", "https://www.mad4wheels.com/img/free-car-images/mobile/19531/lamborghini-huracan-tecnica-2023-669688.jpg"], ["price", "200000.0"], ["created_at", "2022-05-10 07:28:46.277052"], ["updated_at", "2022-05-10 07:28:46.277052"]]
+  [1m[36mTRANSACTION (85.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY "cars"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/users/1" for ::1 at 2022-05-10 08:53:40 +0100
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:45:in `set_user'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 4.1ms | Allocations: 8277)
+
+
