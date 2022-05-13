@@ -18,7 +18,7 @@ class Api::V1::CarsController < ApplicationController
     @car = Car.new(car_params)
 
     if @car.save
-      render json: @car, status: :created, location: @car
+      render json: @car, status: :created
     else
       render json: @car.errors, status: :unprocessable_entity
     end
@@ -47,6 +47,7 @@ class Api::V1::CarsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def car_params
-    params.fetch(:car, {})
+    # params.fetch(:car, {})
+    params.require(:car).permit(:make, :model, :year, :image, :price)
   end
 end
