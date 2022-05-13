@@ -8,7 +8,7 @@ class Api::V1::ReservationsController < ApplicationController
         created_at: reservation.created_at,
         car_model: "#{reservation.car.make} - #{reservation.car.model}",
         city: reservation.city,
-        id: reservation.id,
+        id: reservation.id
       }
     end
 

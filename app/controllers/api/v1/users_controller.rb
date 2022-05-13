@@ -54,7 +54,7 @@ class Api::V1::UsersController < ApplicationController
     if user&.authenticate(params[:password])
       payload = { user_id: user.id }
       token = encode(payload)
-      render json: { user: user, token: token }
+      render json: { user:, token: }
     else
       render json: { error: 'User not found' }
     end
