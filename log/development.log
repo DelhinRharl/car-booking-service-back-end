@@ -837,3 +837,267 @@ Processing by Api::V1::ReservationsController#index as HTML
 Completed 200 OK in 63ms (Views: 0.5ms | ActiveRecord: 23.2ms | Allocations: 13426)
 
 
+Started GET "/" for ::1 at 2022-05-13 21:30:33 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.1.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.1.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.7ms | Allocations: 326)
+Completed 200 OK in 42ms (Views: 7.9ms | Allocations: 2541)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 21:30:40 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 68ms (Views: 1.6ms | ActiveRecord: 213.1ms | Allocations: 2691)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 21:30:41 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 772)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:30:41 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (124.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 158ms (Views: 24.2ms | ActiveRecord: 124.1ms | Allocations: 5143)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:30:41 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 1789)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:30:47 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (8.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 69.2ms | ActiveRecord: 8.7ms | Allocations: 1773)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:30:48 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 104ms (Views: 103.4ms | ActiveRecord: 0.5ms | Allocations: 1773)
+
+
+Started POST "/api/v1/users/6/reservations" for ::1 at 2022-05-13 21:30:55 +0200
+Processing by Api::V1::ReservationsController#create as HTML
+  Parameters: {"city"=>"Chicago", "car_id"=>"4", "user_id"=>"6", "reservation"=>{"user_id"=>"6", "car_id"=>"4", "city"=>"Chicago"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+  [1m[36mReservation Create (44.3ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "car_id", "created_at", "updated_at", "city") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 6], ["car_id", 4], ["created_at", "2022-05-13 19:30:55.811790"], ["updated_at", "2022-05-13 19:30:55.811790"], ["city", "Chicago"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+Completed 201 Created in 66ms (Views: 0.4ms | ActiveRecord: 48.4ms | Allocations: 6090)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:31:07 +0200
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 21:31:07 +0200
+Processing by Api::V1::CarsController#index as */*
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.6ms | Allocations: 2823)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:31:07 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.3ms | Allocations: 1795)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 359ms (Views: 0.3ms | ActiveRecord: 204.1ms | Allocations: 8434)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 21:31:08 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 772)
+
+
+Started POST "/api/v1/users/6/reservations" for ::1 at 2022-05-13 21:31:10 +0200
+Processing by Api::V1::ReservationsController#create as HTML
+  Parameters: {"city"=>"", "car_id"=>"", "user_id"=>"6", "reservation"=>{"user_id"=>"6", "car_id"=>"", "city"=>""}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+  [1m[36mTRANSACTION (40.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:27:in `create'
+Completed 422 Unprocessable Entity in 58ms (Views: 4.7ms | ActiveRecord: 43.4ms | Allocations: 2639)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:32:42 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.9ms | Allocations: 1820)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 21:32:42 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.5ms | Allocations: 1773)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 21:56:42 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 1393ms (Views: 4.7ms | ActiveRecord: 663.0ms | Allocations: 3028)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 21:56:43 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 772)
+
+
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-13 21:57:07 +0200
+Processing by Api::V1::ReservationsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (44.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (82.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 292ms (Views: 9.5ms | ActiveRecord: 128.8ms | Allocations: 5788)
+
+
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-13 21:57:07 +0200
+Processing by Api::V1::ReservationsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 52ms (Views: 0.5ms | ActiveRecord: 3.7ms | Allocations: 5318)
+
+
+  [1m[36mReservation Load (1.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 22:09:28 +0200
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 22:09:30 +0200
+Processing by Api::V1::ReservationsController#index as */*
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (1.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 508ms (Views: 2.9ms | ActiveRecord: 136.7ms | Allocations: 15731)
+
+
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 22:09:35 +0200
+Processing by Api::V1::ReservationsController#index as */*
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 925ms (Views: 79.6ms | ActiveRecord: 343.4ms | Allocations: 15871)
+
+
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 223.2ms | Allocations: 1132)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 22:09:36 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 214ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 791)
+
+
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 22:09:39 +0200
+Processing by Api::V1::ReservationsController#index as */*
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (2.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 85ms (Views: 0.3ms | ActiveRecord: 4.6ms | Allocations: 3296)
+
+
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 22:09:39 +0200
+Processing by Api::V1::ReservationsController#index as */*
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (6.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCar Load (5.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 89ms (Views: 2.3ms | ActiveRecord: 14.8ms | Allocations: 3235)
+
+
