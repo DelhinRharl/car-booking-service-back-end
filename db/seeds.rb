@@ -20,3 +20,9 @@ User.create(name: "Aiden", email: "aiden@example.com", password: "123456", admin
 User.create(name: "Randy", email: "randy@example.com", password: "123456")
 User.create(name: "Theodore", email: "theo@example.com", password: "123456")
 User.create(name: "Joe", email: "joe@example.com", password: "123456", admin: true)
+
+Reservation.create(user_id: 1, car_id: 1, city: 'London')
+Reservation.create(user_id: 2, car_id: 2, city: 'Dubai')
+Reservation.create(user_id: 3, car_id: 3, city: 'Tokyo')
+Reservation.create(user_id: 4, car_id: 4, city: 'Paris')
+Reservation.create(user_id: 5, car_id: 5, city: 'Berlin')

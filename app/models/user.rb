@@ -7,5 +7,4 @@ class User < ApplicationRecord
   def authenticate(provided_password)
     provided_password == password
   end
-  
 end
