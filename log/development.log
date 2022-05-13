@@ -212,3 +212,628 @@ Migrating to AddPasswordToUsers (20220513094540)
   [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3200342286155121975)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/ws" for ::1 at 2022-05-13 16:32:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20220513073744_add_city_to_reservations.rb
+20220513073913_add_description_to_cars.rb
+20220513094504_add_email_to_users.rb
+20220513094540_add_password_to_users.rb
+
+
+):
+  
+activerecord (7.0.2.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-05-13 16:32:10 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20220513073744_add_city_to_reservations.rb
+20220513073913_add_description_to_cars.rb
+20220513094504_add_email_to_users.rb
+20220513094540_add_password_to_users.rb
+
+
+):
+  
+activerecord (7.0.2.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-05-13 16:33:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20220513073744_add_city_to_reservations.rb
+20220513073913_add_description_to_cars.rb
+20220513094504_add_email_to_users.rb
+20220513094540_add_password_to_users.rb
+
+
+):
+  
+activerecord (7.0.2.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-13 16:33:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20220513073744_add_city_to_reservations.rb
+20220513073913_add_description_to_cars.rb
+20220513094504_add_email_to_users.rb
+20220513094540_add_password_to_users.rb
+
+
+):
+  
+activerecord (7.0.2.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-13 16:33:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20220513073744_add_city_to_reservations.rb
+20220513073913_add_description_to_cars.rb
+20220513094504_add_email_to_users.rb
+20220513094540_add_password_to_users.rb
+
+
+):
+  
+activerecord (7.0.2.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-05-13 16:34:07 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20220513073744_add_city_to_reservations.rb
+20220513073913_add_description_to_cars.rb
+20220513094504_add_email_to_users.rb
+20220513094540_add_password_to_users.rb
+
+
+):
+  
+activerecord (7.0.2.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (199.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3200342286155121975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCityToReservations (20220513073744)
+  [1m[36mTRANSACTION (43.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.6ms)[0m  [1m[35mALTER TABLE "reservations" ADD "city" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (95.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220513073744"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDescriptionToCars (20220513073913)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (36.2ms)[0m  [1m[35mALTER TABLE "cars" ADD "description" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220513073913"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailToUsers (20220513094504)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220513094504"]]
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPasswordToUsers (20220513094540)
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "password" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220513094540"]]
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3200342286155121975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-13 16:34:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Bohdan Shcherbak", "email"=>"b.szczerbak@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (41.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b.szczerbak@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+  [1m[36mUser Create (4.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "admin", "created_at", "updated_at", "email", "password") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bohdan Shcherbak"], ["admin", false], ["created_at", "2022-05-13 14:34:42.813902"], ["updated_at", "2022-05-13 14:34:42.813902"], ["email", "b.szczerbak@gmail.com"], ["password", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+Completed 201 Created in 90ms (Views: 0.5ms | ActiveRecord: 52.2ms | Allocations: 11529)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2022-05-13 16:34:46 +0200
+Processing by Api::V1::UsersController#login as */*
+  Parameters: {"name"=>"Bohdan Shcherbak", "email"=>"b.szczerbak@gmail.com", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"name"=>"Bohdan Shcherbak", "email"=>"b.szczerbak@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b.szczerbak@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:52:in `login'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 1367)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:34:46 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (40.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 11.4ms | ActiveRecord: 47.6ms | Allocations: 7240)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:34:46 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (2.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 2.6ms | Allocations: 1804)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:34:54 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 149ms (Views: 148.1ms | ActiveRecord: 0.4ms | Allocations: 1787)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:34:55 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 1773)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:36:11 +0200
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 16:36:11 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1901)
+
+
+Started GET "/api/v1/login" for 127.0.0.1 at 2022-05-13 16:36:11 +0200
+Processing by Api::V1::UsersController#token_authenticate as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:65:in `token_authenticate'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 794)
+
+
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 482ms (Views: 432.7ms | ActiveRecord: 48.6ms | Allocations: 7523)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:36:12 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 1773)
+
+
+Started GET "/ws" for ::1 at 2022-05-13 16:36:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:37:55 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 25.9ms | ActiveRecord: 0.7ms | Allocations: 1935)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:37:55 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 1773)
+
+
+Started POST "/api/v1/users/undefined/reservations" for ::1 at 2022-05-13 16:39:30 +0200
+Processing by Api::V1::ReservationsController#create as HTML
+  Parameters: {"city"=>"New Mexico", "car_id"=>"5", "user_id"=>"undefined", "reservation"=>{"car_id"=>"5", "city"=>"New Mexico"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mCar Load (2.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 118ms (Views: 17.0ms | ActiveRecord: 51.9ms | Allocations: 9871)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:40:10 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (14.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 7.3ms | ActiveRecord: 14.5ms | Allocations: 1818)
+
+
+Started GET "/ws" for ::1 at 2022-05-13 16:40:33 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:40:43 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms | Allocations: 1773)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:40:46 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (47.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 127ms (Views: 78.6ms | ActiveRecord: 47.9ms | Allocations: 1773)
+
+
+Started POST "/api/v1/users/6/reservations" for ::1 at 2022-05-13 16:40:58 +0200
+Processing by Api::V1::ReservationsController#create as HTML
+  Parameters: {"city"=>"New Mexico", "car_id"=>"5", "user_id"=>"6", "reservation"=>{"user_id"=>"6", "car_id"=>"5", "city"=>"New Mexico"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mCar Load (2.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mReservation Create (11.3ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "car_id", "created_at", "updated_at", "city") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 6], ["car_id", 5], ["created_at", "2022-05-13 14:40:58.282200"], ["updated_at", "2022-05-13 14:40:58.282200"], ["city", "New Mexico"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 17.6ms | Allocations: 7145)
+
+
+  
+NoMethodError (undefined method `reservation_url' for #<Api::V1::ReservationsController:0x0000000000b3b0>
+
+              target.public_send(method, *args)
+                    ^^^^^^^^^^^^):
+  
+app/controllers/api/v1/reservations_controller.rb:21:in `create'
+Started POST "/api/v1/users/6/reservations" for ::1 at 2022-05-13 16:41:39 +0200
+Processing by Api::V1::ReservationsController#create as HTML
+  Parameters: {"city"=>"New Mexico", "car_id"=>"5", "user_id"=>"6", "reservation"=>{"user_id"=>"6", "car_id"=>"5", "city"=>"New Mexico"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mReservation Create (2.2ms)[0m  [1m[32mINSERT INTO "reservations" ("user_id", "car_id", "created_at", "updated_at", "city") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 6], ["car_id", 5], ["created_at", "2022-05-13 14:41:39.988495"], ["updated_at", "2022-05-13 14:41:39.988495"], ["city", "New Mexico"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (41.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:20:in `create'
+Completed 201 Created in 129ms (Views: 0.4ms | ActiveRecord: 94.3ms | Allocations: 12779)
+
+
+Started GET "/ws" for ::1 at 2022-05-13 16:49:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:50:16 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.9ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 12.8ms | Allocations: 4512)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-13 16:51:15 +0200
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 1777)
+
+
+Started GET "/api/v1/users/7/reservations" for ::1 at 2022-05-13 17:36:40 +0200
+Processing by Api::V1::ReservationsController#index as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+Completed 404 Not Found in 83ms (ActiveRecord: 52.7ms | Allocations: 5128)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=7):
+  
+app/controllers/api/v1/reservations_controller.rb:6:in `index'
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 17:36:48 +0200
+Processing by Api::V1::ReservationsController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms | Allocations: 6213)
+
+
+  
+NoMethodError (undefined method `reservations' for #<User id: 6, name: "Bohdan Shcherbak", admin: false, created_at: "2022-05-13 14:34:42.813902000 +0000", updated_at: "2022-05-13 14:34:42.813902000 +0000", email: "b.szczerbak@gmail.com", password: [FILTERED]>):
+  
+app/controllers/api/v1/reservations_controller.rb:6:in `index'
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 17:38:29 +0200
+Processing by Api::V1::ReservationsController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (41.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 106ms (Views: 7.6ms | ActiveRecord: 65.6ms | Allocations: 10276)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-05-13 17:38:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 17:46:02 +0200
+Processing by Api::V1::ReservationsController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (1.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 27.8ms | Allocations: 19151)
+
+
+  
+NoMethodError (undefined method `mark' for #<Car id: 5, make: "Lamborghini", model: "Urus Pearl Capsule", year: 2022, image: "https://www.stage.lamborghini.com/sites/it-en/file...", price: 0.4e7, created_at: "2022-05-12 13:54:51.378199000 +0000", updated_at: "2022-05-12 13:54:51.378199000 +0000", description: nil>
+Did you mean?  make):
+  
+app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+app/controllers/api/v1/reservations_controller.rb:6:in `map'
+app/controllers/api/v1/reservations_controller.rb:6:in `index'
+Started GET "/api/v1/users/6/reservations" for ::1 at 2022-05-13 17:46:29 +0200
+Processing by Api::V1::ReservationsController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `index'
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:6:in `map'
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:9:in `block in index'
+Completed 200 OK in 63ms (Views: 0.5ms | ActiveRecord: 23.2ms | Allocations: 13426)
+
+
