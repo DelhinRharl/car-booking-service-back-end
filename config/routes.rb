@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :cars
-      resources :reservations
-      resources :users
+      resources :users do
+        resources :reservations
+      end
+      
+      post "/login", to: "users#login"
+      get "/login", to: "users#token_authenticate"
     end
   end
 
