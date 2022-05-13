@@ -15,8 +15,8 @@ Car.create(make: "Pagani", model: "Huayra", year: 2011, image: "https://csr2crew
 Car.create(make: "Porsche", model: "Taycan Turbo S", year: 2020, image: "https://www.porsche-rolf.ru/photos/cars/custom/486934_lNdoOJuUBxMulQTcdYpk34SggDdRVYhm.jpg.optimized.png", price: "900000")
 Car.create(make: "McLaren", model: "P1", year: 2015, image: "https://static.wikia.nocookie.net/forzamotorsport/images/b/bd/HOR_XB1_McLaren_P1.png", price: "2500000")
 
-User.create(name: "John")
-User.create(name: "Aiden", admin: true)
-User.create(name: "Randy")
-User.create(name: "Theodore")
-User.create(name: "Joe", admin: true)
+User.create(name: "John", email: "john@example.com", password: "123456")
+User.create(name: "Aiden", email: "aiden@example.com", password: "123456", admin: true)
+User.create(name: "Randy", email: "randy@example.com", password: "123456")
+User.create(name: "Theodore", email: "theo@example.com", password: "123456")
+User.create(name: "Joe", email: "joe@example.com", password: "123456", admin: true)
