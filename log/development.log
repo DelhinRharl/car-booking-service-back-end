@@ -152,3 +152,26 @@ Processing by Api::V1::CarsController#show as HTML
 Completed 200 OK in 30ms (Views: 1.0ms | ActiveRecord: 8.7ms | Allocations: 10543)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-13 12:30:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.0.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.2.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 829)
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 7462)
+
+
+Started GET "/v1/greetings" for 127.0.0.1 at 2022-05-13 12:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/v1/greetings"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-05-13 12:30:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/cars" for 127.0.0.1 at 2022-05-13 12:30:40 +0100
+Processing by Api::V1::CarsController#index as HTML
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 102ms (Views: 75.9ms | ActiveRecord: 5.7ms | Allocations: 11791)
+
+
