@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :cars
-  has_many :cars, through: :reservations
+  has_many :cars, dependent: :destroy
+  has_many :cars, through: :reservations, dependent: :destroy
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
 
