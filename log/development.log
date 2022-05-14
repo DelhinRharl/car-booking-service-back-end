@@ -1101,3 +1101,59 @@ Processing by Api::V1::ReservationsController#index as */*
 Completed 200 OK in 89ms (Views: 2.3ms | ActiveRecord: 14.8ms | Allocations: 3235)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-14 15:57:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (30.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.5ms | Allocations: 829)
+Completed 200 OK in 63ms (Views: 41.0ms | ActiveRecord: 0.0ms | Allocations: 7461)
+
+
+Started GET "/api-docs" for 127.0.0.1 at 2022-05-14 15:57:37 +0300
+Started GET "/api-docs/index.html" for 127.0.0.1 at 2022-05-14 15:57:37 +0300
+Started GET "/api-docs/swagger-ui.css" for 127.0.0.1 at 2022-05-14 15:57:37 +0300
+Started GET "/api-docs/swagger-ui-bundle.js" for 127.0.0.1 at 2022-05-14 15:57:37 +0300
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for 127.0.0.1 at 2022-05-14 15:57:37 +0300
+Started GET "/api-docs/v1/swagger.yaml" for 127.0.0.1 at 2022-05-14 15:57:39 +0300
+Started GET "/api-docs/favicon-32x32.png" for 127.0.0.1 at 2022-05-14 15:57:39 +0300
+Started GET "/api-docs/index.html" for 127.0.0.1 at 2022-05-14 15:58:07 +0300
+Started GET "/api-docs/swagger-ui.css" for 127.0.0.1 at 2022-05-14 15:58:07 +0300
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for 127.0.0.1 at 2022-05-14 15:58:07 +0300
+Started GET "/api-docs/swagger-ui-bundle.js" for 127.0.0.1 at 2022-05-14 15:58:07 +0300
+Started GET "/api-docs/v1/swagger.yaml" for 127.0.0.1 at 2022-05-14 15:58:09 +0300
+Started GET "/api-docs/favicon-32x32.png" for 127.0.0.1 at 2022-05-14 15:58:09 +0300
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "car_booking_service_back_end_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "car_booking_service_back_end_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3200342286155121975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (111.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3200342286155121975)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-14 16:10:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.8ms | Allocations: 724)
+Completed 200 OK in 69ms (Views: 53.2ms | ActiveRecord: 0.0ms | Allocations: 6190)
+
+
+Started GET "/api-docs" for 127.0.0.1 at 2022-05-14 16:10:58 +0300
+Started GET "/api-docs/index.html" for 127.0.0.1 at 2022-05-14 16:10:58 +0300
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for 127.0.0.1 at 2022-05-14 16:10:58 +0300
+Started GET "/api-docs/swagger-ui.css" for 127.0.0.1 at 2022-05-14 16:10:58 +0300
+Started GET "/api-docs/swagger-ui-bundle.js" for 127.0.0.1 at 2022-05-14 16:10:58 +0300
+Started GET "/api-docs/v1/swagger.yaml" for 127.0.0.1 at 2022-05-14 16:11:01 +0300
+Started GET "/" for 127.0.0.1 at 2022-05-14 16:29:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.5ms | Allocations: 724)
+Completed 200 OK in 42ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 6190)
+
+
+Started GET "/api-docs" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
+Started GET "/api-docs/index.html" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
+Started GET "/api-docs/swagger-ui.css" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
+Started GET "/api-docs/swagger-ui-bundle.js" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
+Started GET "/api-docs/v1/swagger.yaml" for 127.0.0.1 at 2022-05-14 16:30:06 +0300
