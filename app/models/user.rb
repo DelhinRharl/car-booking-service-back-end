@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :cars
+  has_many :reservations
   has_many :cars, through: :reservations
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
