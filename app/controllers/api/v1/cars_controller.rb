@@ -38,7 +38,7 @@ class Api::V1::CarsController < ApplicationController
     car = Car.find(params[:id])
     id = car.id
     car.destroy
-    render json: id, status: :success
+    render json: id
   end
 
   private
