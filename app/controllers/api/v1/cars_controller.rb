@@ -35,7 +35,10 @@ class Api::V1::CarsController < ApplicationController
 
   # DELETE /cars/1
   def destroy
-    @car.destroy
+    car = Car.find(params[:id])
+    id = car.id
+    car.destroy
+    render json: id, status: :success
   end
 
   private
