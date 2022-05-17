@@ -1157,3 +1157,112 @@ Started GET "/api-docs/swagger-ui.css" for 127.0.0.1 at 2022-05-14 16:30:04 +030
 Started GET "/api-docs/swagger-ui-bundle.js" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
 Started GET "/api-docs/swagger-ui-standalone-preset.js" for 127.0.0.1 at 2022-05-14 16:30:04 +0300
 Started GET "/api-docs/v1/swagger.yaml" for 127.0.0.1 at 2022-05-14 16:30:06 +0300
+Started GET "/ws" for ::1 at 2022-05-16 11:46:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2022-05-16 11:47:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2022-05-16 11:48:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2022-05-16 11:50:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/api/v1/users" for 127.0.0.1 at 2022-05-16 11:59:25 +0300
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Kevin Koome", "email"=>"koomekevo@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (47.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "koomekevo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+  [1m[36mUser Create (78.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "admin", "created_at", "updated_at", "email", "password") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kevin Koome"], ["admin", false], ["created_at", "2022-05-16 08:59:27.845863"], ["updated_at", "2022-05-16 08:59:27.845863"], ["email", "koomekevo@gmail.com"], ["password", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (109.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `create'
+Completed 201 Created in 599ms (Views: 41.2ms | ActiveRecord: 300.6ms | Allocations: 12693)
+
+
+Started POST "/api/v1/login" for 127.0.0.1 at 2022-05-16 11:59:30 +0300
+Processing by Api::V1::UsersController#login as */*
+  Parameters: {"name"=>"Kevin Koome", "email"=>"koomekevo@gmail.com", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"name"=>"Kevin Koome", "email"=>"koomekevo@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "koomekevo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:52:in `login'
+Completed 200 OK in 121ms (Views: 1.3ms | ActiveRecord: 3.1ms | Allocations: 1312)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:31 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (23.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 142ms (Views: 9.9ms | ActiveRecord: 23.7ms | Allocations: 3296)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:31 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 657)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:35 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (2.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 2.7ms | Allocations: 656)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:35 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 641)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:42 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 653)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:42 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 641)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:52 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 641)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:52 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 641)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:53 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (1.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.2ms | Allocations: 641)
+
+
+Started GET "/api/v1/cars" for ::1 at 2022-05-16 11:59:53 +0300
+Processing by Api::V1::CarsController#index as */*
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 641)
+
+
