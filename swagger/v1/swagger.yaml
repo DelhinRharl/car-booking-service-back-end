@@ -149,4 +149,4 @@ servers:
 - url: https://{defaultHost}
   variables:
     defaultHost:
-      default: www.example.com
+      default: car-booking-service-back-end.herokuapp.com
