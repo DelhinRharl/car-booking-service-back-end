@@ -5,8 +5,10 @@
 
 - Ruby on Rails
 ## Live Demo
+https://car-booking-premium.herokuapp.com/api/v1/users
 
-[Live Demo Link](https://car-booking-service-back-end.herokuapp.com/)
+* [Live Demo Link](https://car-booking-premium.herokuapp.com/api/v1/users)
+* [Swagger Demo Link](https://car-booking-premium.herokuapp.com/api-docs)
 
 ## Kanban Board
 [Kanban](https://github.com/DelhinRharl/car-booking-service-front-end/projects/1)
@@ -57,9 +59,12 @@ To get a local copy up and running follow these simple example steps.
 - Ruby on Rails
 - postgresql
 
-## Swagger Setup
- visit[Localhost/api/docs](https://car-booking-premium.herokuapp.com/api-docs/index.html
-)
+## Swagger Local Setup
+   ```
+   rails s
+   ```
+   Visit [localhost/api-docs](https://localhost:3000/api-docs)
+ 
 ## Authors
 
 👤 **Charles Gobina**
