@@ -1266,3 +1266,12 @@ Processing by Api::V1::CarsController#index as */*
 Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 641)
 
 
+Started GET "/api/v1/cars/" for 127.0.0.1 at 2022-05-17 22:17:56 +0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CarsController#index as */*
+  Parameters: {"car"=>{"make"=>"test", "model"=>"test", "year"=>2000, "price"=>200000, "description"=>"test", "image"=>"test.png"}}
+  [1m[36mCar Load (16.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/controllers/api/v1/cars_controller.rb:8:in `index'
+Completed 200 OK in 59ms (Views: 5.5ms | ActiveRecord: 46.4ms | Allocations: 22521)
+
+

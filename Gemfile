@@ -18,6 +18,9 @@ gem 'puma', '~> 5.0'
 # JSON Web Token for Authentication
 gem 'jwt'
 
+gem 'rake'
+gem 'rspec'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
