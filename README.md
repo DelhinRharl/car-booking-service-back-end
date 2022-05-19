@@ -6,13 +6,20 @@
 - Ruby on Rails
 ## Live Demo
 
-https://car-booking-service-back-end.herokuapp.com/
+[Live Demo Link](https://car-booking-service-back-end.herokuapp.com/)
 
 ## Kanban Board
 [Kanban](https://github.com/DelhinRharl/car-booking-service-front-end/projects/1)
 
 ## Initial Kanban
 [kanban](https://user-images.githubusercontent.com/85197908/166709716-a948e45b-a962-4419-b279-55f2626cd77a.png)
+
+## Team members
+- [Anuar](https://github.com/anuarshaidenov)
+- [Affaxed](https://github.com/DelhinRharl)
+- [Charles](https://github.com/charlesgobina)
+- [Bohdan](https://github.com/akucintavalent)
+- [Kevin](https://github.com/koomekevo)
 
 ## Prerequisites
 
@@ -90,3 +97,4 @@ Contributions, issues, and feature requests are welcome!
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
