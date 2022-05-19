@@ -7,6 +7,13 @@
 ## Live Demo
 
 https://car-booking-service-back-end.herokuapp.com/
+
+## Kanban Board
+[Kanban](https://github.com/DelhinRharl/car-booking-service-front-end/projects/1)
+
+## Initial Kanban
+[kanban](https://user-images.githubusercontent.com/85197908/166709716-a948e45b-a962-4419-b279-55f2626cd77a.png)
+
 ## Prerequisites
 
 - Ruby
@@ -18,17 +25,34 @@ https://car-booking-service-back-end.herokuapp.com/
 To get a local copy up and running follow these simple example steps.
 
 1. clone the repository to you machine using your terminal:
-   `git clone git@github.com:DelhinRharl/car-booking-service-back-end.git`
-   `cd car-booking-service-back-end`
+   ```
+   git clone git@github.com:DelhinRharl/car-booking-service-back-end.git
+   ```
+   ```
+   cd car-booking-service-back-end
+   ```
 2. Install the gems:
-   `bundle install`
+   ```
+   bundle install
+   ```
 3. Setup the development and the test databases:
-   `rails db:setup`
+    ```
+   rails db:setup
+    ```
 4. To run the server use:
-   `rails s`
+   ```
+   rails s
+   ```
+   Visit [localhost](http://localhost:3000/api/v1) and pass the desired enpoints to view the content
 ## Install
 
 - Ruby
+- Ruby on Rails
+- postgresql
+
+## Swagger Setup
+ visit[Localhost/api/docs](https://car-booking-premium.herokuapp.com/api-docs/index.html
+)
 ## Authors
 
 👤 **Charles Gobina**
