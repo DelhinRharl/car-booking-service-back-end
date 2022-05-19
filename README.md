@@ -5,9 +5,10 @@
 
 - Ruby on Rails
 ## Live Demo
+https://car-booking-premium.herokuapp.com/api/v1/users
 
-* [Live Demo Link](https://car-booking-service-back-end.herokuapp.com/api/v1cars)
-* [Swagger Demo Link](https://car-booking-service-back-end.herokuapp.com/api-docs)
+* [Live Demo Link](https://car-booking-premium.herokuapp.com/api/v1/users)
+* [Swagger Demo Link](https://car-booking-premium.herokuapp.com/api-docs)
 
 ## Kanban Board
 [Kanban](https://github.com/DelhinRharl/car-booking-service-front-end/projects/1)
