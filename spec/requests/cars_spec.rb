@@ -60,7 +60,7 @@ describe 'Car API', type: :request do
       expect do
         delete "/api/v1/cars/#{car.id}"
       end.to change(Car, :count).by(-1)
-      expect(response).to have_http_status(:no_content)
+      expect(response).to have_http_status(200)
     end
   end
 end
